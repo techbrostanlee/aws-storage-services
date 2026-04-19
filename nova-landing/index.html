@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NOVA — Design at the Speed of Thought</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Lightbox extra styles -->
+  <style>
+    #lightbox {
+      display: none; position: fixed; inset: 0; z-index: 999;
+      background: rgba(0,0,0,0.92); backdrop-filter: blur(6px);
+      align-items: center; justify-content: center; flex-direction: column;
+      cursor: zoom-out;
+    }
+    #lightbox.open { display: flex; }
+    #lightbox-img {
+      max-width: 90vw; max-height: 80vh;
+      object-fit: contain; border: 1px solid #2A2A2A;
+    }
+    #lightbox-caption {
+      margin-top: 1rem; font-size: 0.78rem; color: #888;
+      letter-spacing: 0.12em; text-transform: uppercase;
+    }
+    .lightbox-close {
+      position: absolute; top: 1.5rem; right: 2rem;
+      font-size: 2rem; color: #fff; cursor: pointer; line-height: 1;
+      opacity: 0.5; transition: opacity 0.2s;
+    }
+    .lightbox-close:hover { opacity: 1; }
+  </style>
+</head>
+<body>
+
+<!-- ── LIGHTBOX ── -->
+<div id="lightbox">
+  <span class="lightbox-close" title="Close">✕</span>
+  <img id="lightbox-img" src="" alt="">
+  <div id="lightbox-caption"></div>
+</div>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-logo">NOVA</div>
+  <ul class="nav-links">
+    <li><a href="#features">Features</a></li>
+    <li><a href="#how">How It Works</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+  </ul>
+  <button class="nav-cta">Start Free →</button>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge"><span class="dot"></span> Now in public beta</div>
+    <h1 class="hero-title">Design at the<br><em>Speed of</em><br>Thought</h1>
+    <p class="hero-sub">NOVA turns rough ideas into polished visuals in seconds. AI-native design tools that actually understand what you're trying to build.</p>
+    <div class="hero-actions">
+      <button class="btn-primary">Get Started Free</button>
+      <button class="btn-ghost">Watch Demo ▶</button>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-val counter" data-target="120000" data-suffix="+">120K+</div>
+        <div class="stat-lbl">Active Users</div>
+      </div>
+      <div>
+        <div class="stat-val counter" data-target="4.9" data-suffix="★">4.9★</div>
+        <div class="stat-lbl">App Rating</div>
+      </div>
+      <div>
+        <div class="stat-val">8 sec</div>
+        <div class="stat-lbl">Avg. Generate Time</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-visual">
+    <div class="card-tag">Live Preview</div>
+    <div class="hero-img-wrap">
+      <div class="card-toolbar">
+        <div class="dot-r"></div><div class="dot-y"></div><div class="dot-g"></div>
+      </div>
+      <img
+        src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=80"
+        alt="Designer working on colorful visual project"
+        loading="eager"
+      >
+      <div class="hero-img-overlay"></div>
+    </div>
+    <div class="card-float">
+      <div class="card-float-title">Render Speed</div>
+      <div class="perf-bar"><div class="perf-fill" data-width="92%" style="width:92%;background:#FF5C00;"></div></div>
+      <div class="perf-bar"><div class="perf-fill" data-width="76%" style="width:76%;background:#FFE500;"></div></div>
+      <div class="perf-bar"><div class="perf-fill" data-width="88%" style="width:88%;background:#2BBFA0;"></div></div>
+      <div style="font-size:0.72rem; color:#888; margin-top:0.5rem;">↑ 37% faster this week</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── LOGOS ── -->
+<div class="logos-strip reveal">
+  <p class="logos-label">Trusted by teams at</p>
+  <div class="logos-row">
+    <span class="logo-item">STRIPE</span>
+    <span class="logo-item">VERCEL</span>
+    <span class="logo-item">LINEAR</span>
+    <span class="logo-item">NOTION</span>
+    <span class="logo-item">LOOM</span>
+    <span class="logo-item">FIGMA</span>
+  </div>
+</div>
+
+<!-- ── FEATURES ── -->
+<section class="features" id="features">
+  <div class="section-eyebrow reveal">What you get</div>
+  <h2 class="section-title reveal">Everything you need.<br>Nothing you don't.</h2>
+  <p class="section-sub reveal">We stripped out the bloat and kept the power. NOVA is built for speed-obsessed creatives who don't have time to fiddle.</p>
+
+  <div class="features-grid stagger-parent" style="margin-top:5rem;">
+    <div class="feature-card stagger-child reveal">
+      <img class="feature-img"
+        src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=600&q=70"
+        alt="Fast generation visual" loading="lazy">
+      <div class="feature-icon orange">⚡</div>
+      <div class="feature-title">Instant Generation</div>
+      <p class="feature-text">Describe what you need and watch it appear. NOVA's AI generates production-ready designs in under 10 seconds.</p>
+    </div>
+    <div class="feature-card stagger-child reveal">
+      <img class="feature-img"
+        src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=600&q=70"
+        alt="Brand color palette" loading="lazy">
+      <div class="feature-icon yellow">🎨</div>
+      <div class="feature-title">Brand-Locked Palettes</div>
+      <p class="feature-text">Upload your brand kit once. Every output automatically matches your fonts, colors, and visual language.</p>
+    </div>
+    <div class="feature-card stagger-child reveal">
+      <img class="feature-img"
+        src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&q=70"
+        alt="Multiple design variants" loading="lazy">
+      <div class="feature-icon purple">✦</div>
+      <div class="feature-title">Smart Variants</div>
+      <p class="feature-text">Generate 12 variations in one click. A/B test visuals before you ever open Figma or Photoshop.</p>
+    </div>
+    <div class="feature-card stagger-child reveal">
+      <img class="feature-img"
+        src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=600&q=70"
+        alt="Team collaboration" loading="lazy">
+      <div class="feature-icon teal">⟲</div>
+      <div class="feature-title">Multiplayer Editing</div>
+      <p class="feature-text">Your whole team, live in the same canvas. Comments, approvals, and version history included.</p>
+    </div>
+    <div class="feature-card stagger-child reveal">
+      <img class="feature-img"
+        src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=70"
+        alt="Export formats" loading="lazy">
+      <div class="feature-icon blue">↗</div>
+      <div class="feature-title">One-Click Export</div>
+      <p class="feature-text">Export to Figma, Sketch, SVG, PNG, or PDF instantly. No copy-pasting. No format conversion headaches.</p>
+    </div>
+    <div class="feature-card stagger-child reveal">
+      <img class="feature-img"
+        src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=70"
+        alt="API and developer tools" loading="lazy">
+      <div class="feature-icon pink">◈</div>
+      <div class="feature-title">API Access</div>
+      <p class="feature-text">Embed NOVA's generation engine directly in your product. REST API with webhooks, SDKs in 6 languages.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── HOW IT WORKS ── -->
+<section class="how" id="how">
+  <div class="how-inner">
+    <div>
+      <div class="section-eyebrow reveal">The process</div>
+      <h2 class="section-title reveal">From prompt<br>to pixel<br>in 3 steps</h2>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-num">01</div>
+          <div>
+            <div class="step-title">Describe your idea</div>
+            <p class="step-desc">Type a plain-language prompt. Be as vague or specific as you want — NOVA figures out the rest.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">02</div>
+          <div>
+            <div class="step-title">Refine with controls</div>
+            <p class="step-desc">Drag sliders for mood, density, and color temperature. See changes apply in real-time.</p>
+          </div>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">03</div>
+          <div>
+            <div class="step-title">Export and ship</div>
+            <p class="step-desc">One click sends your asset anywhere — Slack, Notion, Figma, your email, your CMS.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="how-image-stack reveal">
+      <img class="how-img-main"
+        src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+        alt="Designer at work" loading="lazy">
+      <div class="how-img-badge">
+        <div class="big">8s</div>
+        <div class="small">Avg. generate time</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── GALLERY ── -->
+<section class="gallery" id="gallery">
+  <div class="section-eyebrow reveal">Showcase</div>
+  <h2 class="section-title reveal">Built with NOVA.</h2>
+  <p class="section-sub reveal">Real projects made by real designers using NOVA every day. Click any image to explore.</p>
+
+  <div class="gallery-grid">
+    <div class="gallery-item wide reveal">
+      <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=900&q=75" alt="Brand identity system" loading="lazy">
+      <div class="gallery-label">Brand Identity System</div>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=500&q=75" alt="App UI design" loading="lazy">
+      <div class="gallery-label">App UI Design</div>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="https://images.unsplash.com/photo-1609921212029-bb5a28e60960?w=500&q=75" alt="Color exploration" loading="lazy">
+      <div class="gallery-label">Color Exploration</div>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=500&q=75" alt="Dashboard design" loading="lazy">
+      <div class="gallery-label">Dashboard Design</div>
+    </div>
+    <div class="gallery-item reveal">
+      <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=500&q=75" alt="Data visualisation" loading="lazy">
+      <div class="gallery-label">Data Visualisation</div>
+    </div>
+    <div class="gallery-item wide reveal">
+      <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?w=900&q=75" alt="Team workspace" loading="lazy">
+      <div class="gallery-label">Team Workspace</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── PRICING ── -->
+<section class="pricing" id="pricing">
+  <div class="section-eyebrow reveal">Simple pricing</div>
+  <h2 class="section-title reveal">No surprises.</h2>
+  <p class="section-sub reveal">Start free and scale when you need to. Every plan includes unlimited exports and our core generation engine.</p>
+
+  <div class="pricing-grid">
+    <div class="price-card reveal">
+      <div class="price-plan">Starter</div>
+      <div class="price-amount">$0</div>
+      <div class="price-period">Forever free</div>
+      <hr class="price-divider">
+      <ul class="price-features">
+        <li><span class="check">✓</span> 50 generations / month</li>
+        <li><span class="check">✓</span> 3 brand kits</li>
+        <li><span class="check">✓</span> PNG &amp; SVG export</li>
+        <li><span class="cross">✗</span> <span style="color:#444;">Multiplayer editing</span></li>
+        <li><span class="cross">✗</span> <span style="color:#444;">API access</span></li>
+      </ul>
+      <button class="price-btn">Get Started</button>
+    </div>
+
+    <div class="price-card featured reveal">
+      <div class="price-badge">Most Popular</div>
+      <div class="price-plan">Pro</div>
+      <div class="price-amount">$29</div>
+      <div class="price-period">per month, billed annually</div>
+      <hr class="price-divider">
+      <ul class="price-features">
+        <li><span class="check">✓</span> Unlimited generations</li>
+        <li><span class="check">✓</span> Unlimited brand kits</li>
+        <li><span class="check">✓</span> All export formats</li>
+        <li><span class="check">✓</span> Multiplayer editing</li>
+        <li><span class="cross">✗</span> <span style="color:#444;">API access</span></li>
+      </ul>
+      <button class="price-btn featured-btn">Start Free Trial</button>
+    </div>
+
+    <div class="price-card reveal">
+      <div class="price-plan">Team</div>
+      <div class="price-amount">$79</div>
+      <div class="price-period">per month, billed annually</div>
+      <hr class="price-divider">
+      <ul class="price-features">
+        <li><span class="check">✓</span> Unlimited generations</li>
+        <li><span class="check">✓</span> Unlimited brand kits</li>
+        <li><span class="check">✓</span> All export formats</li>
+        <li><span class="check">✓</span> Multiplayer editing</li>
+        <li><span class="check">✓</span> Full API access</li>
+      </ul>
+      <button class="price-btn">Contact Sales</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── TESTIMONIALS ── -->
+<section class="testimonials">
+  <div class="section-eyebrow reveal">What people say</div>
+  <h2 class="section-title reveal">Real teams.<br>Real results.</h2>
+  <div class="testi-grid">
+    <div class="testi-card reveal">
+      <img class="testi-img"
+        src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=70"
+        alt="Office environment" loading="lazy">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"NOVA cut our design turnaround from 3 days to 3 hours. I don't know how we shipped without it. Genuinely game-changing for a small team."</p>
+      <div class="testi-author">
+        <div class="avatar av-a">JK</div>
+        <div>
+          <div class="author-name">Jamie Kwan</div>
+          <div class="author-role">Head of Brand, Stripe</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <img class="testi-img"
+        src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=70"
+        alt="Team collaboration" loading="lazy">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"The brand-locking feature alone is worth the price. Every asset looks like it came from the same designer — because now it does."</p>
+      <div class="testi-author">
+        <div class="avatar av-b">SR</div>
+        <div>
+          <div class="author-name">Sofia Reyes</div>
+          <div class="author-role">Creative Director, Linear</div>
+        </div>
+      </div>
+    </div>
+    <div class="testi-card reveal">
+      <img class="testi-img"
+        src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=70"
+        alt="Product design workspace" loading="lazy">
+      <div class="stars">★★★★★</div>
+      <p class="testi-text">"I was skeptical about AI design tools but NOVA proved me wrong. The outputs are actually usable right out of the box — no cleanup needed."</p>
+      <div class="testi-author">
+        <div class="avatar av-c">TL</div>
+        <div>
+          <div class="author-name">Tom Langford</div>
+          <div class="author-role">Founder, Fable Studio</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── CTA ── -->
+<section class="cta-section">
+  <img class="cta-bg-img"
+    src="https://images.unsplash.com/photo-1504868584819-f8e8b4b6d7e3?w=1600&q=80"
+    alt="Abstract colorful background" loading="lazy">
+  <div class="cta-content">
+    <h2 class="cta-title">Ready to<br><span>build faster?</span></h2>
+    <p class="cta-sub">Join 120,000 designers and teams who ship better visuals every day with NOVA. Free to start, no credit card needed.</p>
+    <div class="cta-row">
+      <button class="btn-primary">Start for Free →</button>
+      <button class="btn-ghost">Talk to Sales</button>
+    </div>
+  </div>
+</section>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-logo">NOVA</div>
+  <div class="footer-links">
+    <a href="#">Privacy</a>
+    <a href="#">Terms</a>
+    <a href="#">Docs</a>
+    <a href="#">Blog</a>
+    <a href="#">Status</a>
+  </div>
+  <div class="footer-copy">© 2025 Nova Inc. All rights reserved.</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
